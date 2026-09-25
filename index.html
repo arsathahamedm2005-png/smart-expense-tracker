@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pen</title>
+  </head>
+  <body>
+<div class="container">
+
+  <header>
+    <h1>💰 Smart Expense Tracker</h1>
+    <p>Track and manage your daily expenses easily</p>
+  </header>
+
+  <div class="summary">
+
+    <div class="card">
+      <h3>Total Expenses</h3>
+      <p id="totalExpense">₹0.00</p>
+    </div>
+
+    <div class="card">
+      <h3>Transactions</h3>
+      <p id="totalTransactions">0</p>
+    </div>
+
+    <div class="card">
+      <h3>Average Expense</h3>
+      <p id="averageExpense">₹0.00</p>
+    </div>
+
+  </div>
+
+  <div class="section">
+
+    <h2>➕ Add Expense</h2>
+
+    <form id="expenseForm">
+
+      <input
+        type="text"
+        id="expenseName"
+        placeholder="Expense name"
+        required
+      >
+
+      <input
+        type="number"
+        id="expenseAmount"
+        placeholder="Amount"
+        min="1"
+        required
+      >
+
+      <select id="expenseCategory" required>
+        <option value="">Select Category</option>
+        <option value="Food">🍔 Food</option>
+        <option value="Travel">🚗 Travel</option>
+        <option value="Shopping">🛍️ Shopping</option>
+        <option value="Bills">💡 Bills</option>
+        <option value="Other">📦 Other</option>
+      </select>
+
+      <input
+        type="date"
+        id="expenseDate"
+        required
+      >
+
+      <button type="submit">
+        Add Expense
+      </button>
+
+    </form>
+
+  </div>
+
+  <div class="section">
+
+    <div class="expense-header">
+      <h2>📋 Recent Expenses</h2>
+
+      <select id="filterCategory">
+        <option value="All">All Categories</option>
+        <option value="Food">Food</option>
+        <option value="Travel">Travel</option>
+        <option value="Shopping">Shopping</option>
+        <option value="Bills">Bills</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <div id="expenseList"></div>
+
+    <p id="emptyMessage" class="empty">
+      No expenses added yet.
+    </p>
+
+  </div>
+
+</div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
